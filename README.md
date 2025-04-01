@@ -1,70 +1,28 @@
-# GradientHQ
-How to Run the Bot:
-Follow these steps to get the bot up and running:
+# Selenium Gradient Farming Bot
 
-Install Dependencies: First, install the necessary Python libraries:
+This project automates the farming process using Selenium and Chrome, with the **Gradient node extension**. It includes functionality for proxy handling, Telegram notifications, automatic farming every 24 hours, and logging.
 
-bash
-Salin
-Edit
+## Features
+- **Farming Process**: Automates farming actions using Selenium and the Gradient node extension.
+- **Proxy Support**: Automatically switches to backup proxies if the main proxy fails.
+- **Telegram Notifications**: Sends updates about the farming process, including start, success, failure, and errors.
+- **Error Handling**: Automatically restarts the farming process if it fails.
+- **Logging**: Logs all actions, including errors, in a `farming_results.log` file.
+- **Scheduling**: Runs the farming task every 24 hours using the `schedule` library.
+
+## Requirements
+
+- Python 3.6+
+- **Selenium**: For automating the browser interaction.
+- **webdriver-manager**: To manage ChromeDriver installations.
+- **python-telegram-bot**: To send Telegram notifications.
+- **schedule**: To schedule the bot to run periodically.
+
+## Installation
+
+### 1. Install Dependencies
+
+First, install the necessary Python libraries by running:
+
+```bash
 pip install selenium webdriver-manager python-telegram-bot schedule
-Set Up Your Telegram Bot:
-
-Create a bot using BotFather on Telegram (as explained earlier).
-
-Get your bot's API Token.
-
-Find your Chat ID by using a service like @userinfobot on Telegram.
-
-Configure the Script:
-
-Replace the placeholder YOUR_TELEGRAM_BOT_API_TOKEN with your bot's API Token.
-
-Replace YOUR_CHAT_ID with your actual Chat ID.
-
-Update the extension_path variable to the local path where your Gradient node extension is stored.
-
-Set the proxy values in the proxies list with your proxy information.
-
-Run the Script: Save the script to a Python file, e.g., farming_bot.py, and run it:
-
-bash
-Salin
-Edit
-python farming_bot.py
-The bot will:
-
-Run the farming process every 24 hours automatically.
-
-Send Telegram notifications when farming starts, finishes, or fails.
-
-Log all actions in the farming_results.log file.
-
-Monitoring and Debugging:
-
-The script logs all actions and errors in the farming_results.log file.
-
-You can monitor the Telegram chat for real-time updates.
-
-Example Log Messages:
-Farming Started:
-
-arduino
-Salin
-Edit
-Farming session started.
-Farming process started.
-Farming started successfully.
-Error Encountered:
-
-vbnet
-Salin
-Edit
-Error encountered: Unexpected error: Farming did not start correctly.
-Farming Session Ended:
-
-nginx
-Salin
-Edit
-Farming session ended.
-Now, your Selenium Gradient Farming Bot will run automatically, notify you via Telegram, and handle any errors gracefully.
